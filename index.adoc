@@ -1,0 +1,72 @@
+= MONARC Objects Sharing Platform
+CASES Luxembourg <info@cases.lu>
+v{docdate}
+:title-logo-image: images/header.svg
+:Date: 2017-10-28
+:Revision: 0.1
+:description: MONARC Objects Sharing Platform
+:keywords: risk-analysis, monarc, MOSP
+:doctype: article
+:compat-mode!:
+:page-layout!:
+:toc: left
+:toclevels: 3
+:sectanchors:
+:sectlinks:
+:sectnums:
+:linkattrs:
+:webfonts!:
+:icons: font
+:source-highlighter: coderay
+:source-language: asciidoc
+:experimental:
+:stem:
+:idprefix:
+:idseparator: -
+:ast: &ast;
+:dagger: pass:normal[^&dagger;^]
+:endash: &#8211;
+:y: icon:check[role="green"]
+:n: icon:times[role="red"]
+:c: icon:file-text-o[role="blue"]
+:table-caption!:
+:example-caption!:
+:figure-caption!:
+:imagesdir: images
+:includedir: _includes
+:underscore: _
+:adp: AsciiDoc Python
+:adr: Asciidoctor
+// Refs
+:uri-github-mosp: https://github.com/CASES-LU/MOSP
+:uri-mosp: http://objects.monarc.lu
+:uri-monarc-fo: https://github.com/monarc-project/MonarcAppFO
+:uri-monarc-bo: https://github.com/monarc-project/MonarcAppBO
+
+
+== Introduction
+
+=== JSON schema
+
+A JSON schema describes and validates your existing data format(s).
+This ensures the quality of client submitted data.
+MOSP also uses JSON schemas for the generation of the object editor.
+
+For example the JSON schema available here validates the Security
+referentials used in MONARC.
+When creating a new object with MOSP you have first to choose a JSON schema.
+
+You can use any available schemas in order to create shareable JSON objects.
+It is possible to keep an object private even if the goal of this platform is
+to promote the sharing of information. JSON schemas are always public.
+
+
+== Creating a new object
+
+
+
+== Exporting an object for use in MONARC
+
+
+== Using the API
+
