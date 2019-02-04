@@ -10,6 +10,9 @@ pdf: prepare
 		-r asciidoctor-pdf -b pdf *.adoc \
 		-o $(OUTPUT)/pdf/MOSP-guide.pdf
 
+epub: prepare
+	asciidoctor-epub3 -D -o $(OUTPUT)/pdf/MOSP-guide.pdf
+
 prepare:
 	mkdir -p $(OUTPUT)
 

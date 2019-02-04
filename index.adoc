@@ -60,12 +60,24 @@ You can use any available schemas in order to create shareable JSON objects.
 It is possible to keep an object private even if the goal of this platform is
 to promote the sharing of information. JSON schemas are always public.
 
+=== Objects
+
+
 
 == Creating a new object
 
+=== Select a schema
+
+image:new-object-from-schema.png[EditionJsonObject]
+
+
+=== Edit object definition
+
+image:object-json-edition.png[EditionJsonObject]
 
 
 == Exporting an object for use in MONARC
+
 
 
 == Using the API
