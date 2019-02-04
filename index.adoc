@@ -1,11 +1,13 @@
 = MONARC Objects Sharing Platform
 CASES Luxembourg <info@cases.lu>
 v{docdate}
-:title-logo-image: images/header.svg
-:Date: 2017-10-28
+:encoding: utf-8
+:revdate: 2017-10-28
 :Revision: 0.1
 :description: MONARC Objects Sharing Platform
 :keywords: risk-analysis, monarc, MOSP
+:imagesdir: images
+:title-logo-image: image:Logotype_Monochrome_Black.svg[]
 :doctype: article
 :compat-mode!:
 :page-layout!:
@@ -32,7 +34,6 @@ v{docdate}
 :table-caption!:
 :example-caption!:
 :figure-caption!:
-:imagesdir: images
 :includedir: _includes
 :underscore: _
 :adp: AsciiDoc Python

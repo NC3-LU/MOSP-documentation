@@ -8,7 +8,7 @@ html: prepare
 pdf: prepare
 	asciidoctor -a pdf-style=Monarc-theme.yml \
 		-r asciidoctor-pdf -b pdf *.adoc \
-		-o $(OUTPUT)/pdf/technical-guide.pdf
+		-o $(OUTPUT)/pdf/MOSP-guide.pdf
 
 prepare:
 	mkdir -p $(OUTPUT)
