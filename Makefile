@@ -8,10 +8,10 @@ html: prepare
 pdf: prepare
 	asciidoctor -a pdf-style=Monarc-theme.yml \
 		-r asciidoctor-pdf -b pdf *.adoc \
-		-o $(OUTPUT)/pdf/MOSP-guide.pdf
+		-o $(OUTPUT)/pdf/MOSP-documentation.pdf
 
 epub: prepare
-	asciidoctor-epub3 -D -o $(OUTPUT)/pdf/MOSP-guide.pdf
+	asciidoctor-epub3 -D $(OUTPUT)/epub/ index.adoc
 
 prepare:
 	mkdir -p $(OUTPUT)
