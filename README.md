@@ -13,3 +13,5 @@ $ sudo gem install coderay pygments.rb
 $ make html
 $ make pdf
 ```
+
+Builds are available [here](https://www.monarc.lu/documentation).
