@@ -82,6 +82,8 @@ image:object-json-edition.png[EditionJsonObject]
 
 == Using the API
 
+An API is provided for automated interactions with the service.
+
 
 === Schema
 
@@ -106,6 +108,8 @@ Getting the list of JSON objects:
 ----
 https://objects.monarc.lu/api/v1/json_object
 ----
+
+Creating a new object:
 
 
 === More complex query
