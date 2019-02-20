@@ -117,7 +117,7 @@ Creating a new object:
 Getting all objects owned by the MONARC organization:
 [source,bash]
 ----
-$ curl https://objects.monarc.lu/api/v1/json_object?q={"name":"organization","op":"has","val":{"name":"name","op":"eq","val": "MONARC"}}
+https://objects.monarc.lu/api/v1/json_object?q={"name":"organization","op":"has","val":{"name":"name","op":"eq","val": "MONARC"}}
 ----
 
 
