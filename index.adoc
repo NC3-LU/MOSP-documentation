@@ -82,3 +82,41 @@ image:object-json-edition.png[EditionJsonObject]
 
 == Using the API
 
+
+=== Schema
+
+[source,bash]
+----
+https://objects.monarc.lu/api/v1/schema/13
+----
+
+
+
+
+=== More complex query
+
+All objects owned by the MONARC organization:
+[source,bash]
+----
+$ curl https://objects.monarc.lu/api/v1/json_object?q={"name":"organization","op":"has","val":{"name":"name","op":"eq","val": "MONARC"}}
+----
+
+All schemas owned by the MONARC organization:
+[source,bash]
+----
+https://objects.monarc.lu/api/v1/schema?q={"filters":[{"name":"organization","op":"has","val":{"name":"name","op":"eq","val":"MONARC"}}]}
+----
+
+
+
+[source,bash]
+----
+https://objects.monarc.lu/api/v1/json_object?q={"name":"schema","op":"has","val":{"name":"name","op":"eq","val": "Security referentials"}}
+----
+
+
+
+
+
+
+
