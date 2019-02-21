@@ -119,7 +119,7 @@ https://objects.monarc.lu/api/v1/json_object
 # curl -i --user username:password \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" -X POST \
-    -d '{"name":"NIST","description":Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5) ,"org_id":2,"json_object":'"$json_object"'}' \
+    -d '{"name":"NIST","description":"Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5)" ,"org_id":2,"json_object":'"$json_object"'}' \
     https://objects.monarc.lu/api/v1/json_object
 
 HTTP/1.0 400 BAD REQUEST
@@ -140,7 +140,7 @@ Vary: Cookie
 # curl -i --user username:password \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" -X POST \
-    -d '{"name":"NIST","description":Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5) ,"org_id":3,"json_object":'"$json_object"'}' \
+    -d '{"name":"NIST","description":"Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5)" ,"org_id":3,"json_object":'"$json_object"'}' \
     https://objects.monarc.lu/api/v1/json_object
 
 HTTP/1.0 400 BAD REQUEST
@@ -163,7 +163,7 @@ Date: Thu, 21 Feb 2019 09:07:26 GMT
 # curl -i --user username:password \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" -X POST \
-    -d '{"name":"NIST","description":Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5) ,"org_id":3,"schema_id":12,"json_object":'"$json_object"'}' \
+    -d '{"name":"NIST","description":"Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5)" ,"org_id":3,"schema_id":12,"json_object":'"$json_object"'}' \
     https://objects.monarc.lu/api/v1/json_object
 
 HTTP/1.0 400 BAD REQUEST
@@ -185,7 +185,7 @@ Date: Thu, 21 Feb 2019 09:07:26 GMT
 # curl -i --user username:password \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" -X POST \
-    -d '{"name":"NIST","description":Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5) ,"org_id":3,"schema_id":12,"json_object":'"$json_object"'}' \
+    -d '{"name":"NIST","description":"Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5)" ,"org_id":3,"schema_id":12,"json_object":'"$json_object"'}' \
     https://objects.monarc.lu/api/v1/json_object
 
 HTTP/1.0 201 CREATED
