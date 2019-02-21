@@ -82,10 +82,10 @@ image:object-json-edition.png[EditionJsonObject]
 
 == Using the API
 
-An API is provided for automated interactions with the service.
+An API is provided in order to interact with the service programmatically.
 
 
-=== Schema
+=== Endpoint for Schemas
 
 Getting the list of schemas:
 [source,bash]
@@ -101,15 +101,104 @@ https://objects.monarc.lu/api/v1/schema/13
 ----
 
 
-=== JSON objects
+=== Endpoint for JSON objects
 
-Getting the list of JSON objects:
+==== Getting the list of JSON objects
+
 [source,bash]
 ----
 https://objects.monarc.lu/api/v1/json_object
 ----
 
-Creating a new object:
+
+==== Creating a new object
+
+[source,bash]
+----
+# json_object='{}'
+# curl -i --user username:password \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" -X POST \
+    -d '{"name":"NIST","description":Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5) ,"org_id":2,"json_object":'"$json_object"'}' \
+    https://objects.monarc.lu/api/v1/json_object
+
+HTTP/1.0 400 BAD REQUEST
+Content-Type: application/json
+Content-Length: 85
+Vary: Cookie
+
+{
+  "message": "You are not allowed to create/edit object from this organization."
+}
+----
+
+
+
+[source,bash]
+----
+# json_object='{}'
+# curl -i --user username:password \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" -X POST \
+    -d '{"name":"NIST","description":Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5) ,"org_id":3,"json_object":'"$json_object"'}' \
+    https://objects.monarc.lu/api/v1/json_object
+
+HTTP/1.0 400 BAD REQUEST
+Content-Type: application/json
+Content-Length: 85
+Vary: Cookie
+Date: Thu, 21 Feb 2019 09:07:26 GMT
+
+{
+  "message": "You must provide the id of a schema."
+}
+----
+
+
+
+
+[source,bash]
+----
+# json_object='{}'
+# curl -i --user username:password \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" -X POST \
+    -d '{"name":"NIST","description":Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5) ,"org_id":3,"schema_id":12,"json_object":'"$json_object"'}' \
+    https://objects.monarc.lu/api/v1/json_object
+
+HTTP/1.0 400 BAD REQUEST
+Content-Type: application/json
+Content-Length: 85
+Vary: Cookie
+Date: Thu, 21 Feb 2019 09:07:26 GMT
+
+{
+  "message": "'The object submited is not validated by the schema."
+}
+----
+
+
+
+[source,bash]
+----
+# json_object='{"label":"NIST SP 800-53","measures":[{"category": "Access Control","code": "AC-1","label": "Access Control Policy and Procedures","uuid": "ebf10522-0f57-4880-aa73-e28a206b7be4"}],"uuid": "cfd2cd50-95fa-4143-b0e5-794249bacae1","version": "5.0"}'
+# curl -i --user username:password \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" -X POST \
+    -d '{"name":"NIST","description":Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5) ,"org_id":3,"schema_id":12,"json_object":'"$json_object"'}' \
+    https://objects.monarc.lu/api/v1/json_object
+
+HTTP/1.0 201 CREATED
+Content-Type: application/json
+Content-Length: 2392
+Location: https://objects.monarc.lu/api/v1/json_object/30
+Vary: Accept, Cookie
+Content-Type: application/json
+Date: Thu, 21 Feb 2019 09:34:39 GMT
+----
+
+The content of the newly created object is also returned.
+
 
 
 === More complex query
