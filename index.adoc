@@ -173,7 +173,7 @@ Vary: Cookie
 Date: Thu, 21 Feb 2019 09:07:26 GMT
 
 {
-  "message": "'The object submitted is not validated by the schema."
+  "message": "The object submitted is not validated by the schema."
 }
 ----
 
