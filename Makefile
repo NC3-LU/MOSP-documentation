@@ -3,7 +3,7 @@ OUTPUT=_build
 
 html: prepare
 	cp -R images $(OUTPUT)/html
-	asciidoctor *.adoc -D $(OUTPUT)/html
+	asciidoctor  *.adoc -D $(OUTPUT)/html
 
 pdf: prepare
 	asciidoctor -a pdf-style=Monarc-theme.yml \

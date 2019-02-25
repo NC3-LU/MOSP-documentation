@@ -44,7 +44,25 @@ v{docdate}
 :uri-monarc-bo: https://github.com/monarc-project/MonarcAppBO
 
 
+ifndef::pdf-style[]
+[NOTE]
+===============================================
+This document is also available as a
+link:https://www.monarc.lu/assets/files/guides/MOSP-documentation.pdf[PDF file].
+===============================================
+endif::[] 
+
+
 == Introduction
+
+This document is a user guide to link:https://github.com/CASES-LU/MOSP[MOSP],
+a platform to create, edit and share JSON objects.
+
+The main goal is to gather security related JSON objects, in the first place
+aimed to be used with MONARC. 
+
+
+== Objects involved in MISP
 
 === JSON schema
 
@@ -64,7 +82,10 @@ to promote the sharing of information. JSON schemas are always public.
 
 
 
-== Creating a new object
+== Using the platform
+
+
+=== Creating a new object
 
 === Select a schema
 
@@ -75,8 +96,12 @@ image:new-object-from-schema.png[EditionJsonObject]
 
 image:object-json-edition.png[EditionJsonObject]
 
+The forms above is generated form the validating JSON schema.
+Validation errors are displayed in the grey box at the right of the
+interface.
 
-== Exporting an object for use in MONARC
+
+=== Exporting an object for use in MONARC
 
 
 
@@ -113,10 +138,10 @@ https://objects.monarc.lu/api/v1/json_object
 
 ==== Creating a new object
 
-[source,bash]
+[source,,role="console"]
 ----
-# json_object='{}'
-# curl -i --user username:password \
+$ json_object='{}'
+$ curl -i --user username:password \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" -X POST \
     -d '{"name":"NIST","description":"Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5)" ,"org_id":2,"json_object":'"$json_object"'}' \
@@ -136,8 +161,8 @@ Vary: Cookie
 
 [source,bash]
 ----
-# json_object='{}'
-# curl -i --user username:password \
+$ json_object='{}'
+$ curl -i --user username:password \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" -X POST \
     -d '{"name":"NIST","description":"Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5)" ,"org_id":3,"json_object":'"$json_object"'}' \
@@ -159,8 +184,8 @@ Date: Thu, 21 Feb 2019 09:07:26 GMT
 
 [source,bash]
 ----
-# json_object='{}'
-# curl -i --user username:password \
+$ json_object='{}'
+$ curl -i --user username:password \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" -X POST \
     -d '{"name":"NIST","description":"Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5)" ,"org_id":3,"schema_id":12,"json_object":'"$json_object"'}' \
@@ -181,8 +206,8 @@ Date: Thu, 21 Feb 2019 09:07:26 GMT
 
 [source,bash]
 ----
-# json_object='{"label":"NIST SP 800-53","measures":[{"category": "Access Control","code": "AC-1","label": "Access Control Policy and Procedures","uuid": "ebf10522-0f57-4880-aa73-e28a206b7be4"}],"uuid": "cfd2cd50-95fa-4143-b0e5-794249bacae1","version": "5.0"}'
-# curl -i --user username:password \
+$ json_object='{"label":"NIST SP 800-53","measures":[{"category": "Access Control","code": "AC-1","label": "Access Control Policy and Procedures","uuid": "ebf10522-0f57-4880-aa73-e28a206b7be4"}],"uuid": "cfd2cd50-95fa-4143-b0e5-794249bacae1","version": "5.0"}'
+$ curl -i --user username:password \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" -X POST \
     -d '{"name":"NIST","description":"Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5)" ,"org_id":3,"schema_id":12,"json_object":'"$json_object"'}' \
