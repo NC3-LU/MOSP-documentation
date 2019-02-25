@@ -55,14 +55,20 @@ endif::[]
 
 == Introduction
 
-This document is a user guide to link:https://github.com/CASES-LU/MOSP[MOSP],
-a platform to create, edit and share JSON objects.
+This document is intented to be a presentation and a user guide to link:https://github.com/CASES-LU/MOSP[MOSP], a platform to create, edit and share valid JSON objects.
 
-The main goal is to gather security related JSON objects, in the first place
-aimed to be used with MONARC. 
+MOSP supports any kind of JSON objects, you just have to specify a <<JSON schema>>.
+The instance link:https://objects.monarc.lu[objects.monarc.lu], operated by link:https://www.cases.lu[CASES], is dedicated to gather security related objects in the first place aimed to be used with link:https://www.monarc.lu[MONARC].
+
+Objects officially provided by the MONARC project are available at link:https://objects.monarc.lu/organization/MONARC[https://objects.monarc.lu/organization/MONARC].
+Note that any *object* created with a *JSON schema* provided by the MONARC project will be compatible with the MONARC software.
+In other words, you can use our JSON schemas in order to create objects (referentials, mapping, etc.) for a usage in your own security analysis.
 
 
-== Objects involved in MISP
+== Objects involved in MOSP
+
+The core concept of MOSP lies on the <<JSON schema,JSON schemas>> and <<Objects,JSON Objects>>.
+Each objects you create within MOSP will be conforms to a selected schema.
 
 === JSON schema
 
@@ -70,13 +76,18 @@ A JSON schema describes and validates your existing data format(s).
 This ensures the quality of client submitted data.
 MOSP also uses JSON schemas for the generation of the object editor.
 
-For example the JSON schema available here validates the Security
-referentials used in MONARC.
-When creating a new object with MOSP you have first to choose a JSON schema.
+For example the JSON schema available link:https://objects.monarc.lu/schema/view/12[here] validates the Security referentials used in MONARC.
+When creating a new object with MOSP you have first to choose a JSON schema and an owning organization. A user account can be bind to one or
+multiple organizations.
 
 You can use any available schemas in order to create shareable JSON objects.
-It is possible to keep an object private even if the goal of this platform is
-to promote the sharing of information. JSON schemas are always public.
+It is possible to keep an object private (draft state) even if the goal of this platform is to promote the sharing of information. JSON schemas are always public.
+
+==== Example of schemas
+
+- link:https://objects.monarc.lu/schema/12[Security referentials]
+- link:https://objects.monarc.lu/schema/13[Security referentials mapping]
+
 
 === Objects
 
@@ -97,12 +108,12 @@ image:new-object-from-schema.png[EditionJsonObject]
 image:object-json-edition.png[EditionJsonObject]
 
 The forms above is generated form the validating JSON schema.
-Validation errors are displayed in the grey box at the right of the
-interface.
+Validation errors are displayed in the grey box at the right of the interface.
 
 
 === Exporting an object for use in MONARC
 
+Objects exported from MOSP can be imported in your projects via the link:https://www.monarc.lu/documentation/user-guide/#management-of-knowledge-base[knowledge base] of MONARC.
 
 
 == Using the API
@@ -226,7 +237,7 @@ The content of the newly created object is also returned.
 
 
 
-=== More complex query
+=== More complex queries
 
 Getting all objects owned by the MONARC organization:
 [source,bash]
@@ -269,10 +280,8 @@ organization of the schema.
 
 An object can be public or private (draft mode).
 
-You can only create an object in one of the organizations your account is
-linked to.
-Since all schemas are public you can instantiate a new object with the
-schema of your choice.
+You can only create an object in one of the organizations your account is linked to.
+Since all schemas are public you can instantiate a new object with the schema of your choice.
 
 In order to see a private object or to edit an object your account
 should be linked to the owning organization of this object.
