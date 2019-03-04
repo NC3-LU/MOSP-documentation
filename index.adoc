@@ -74,20 +74,13 @@ A JSON schema describes and validates your existing data format(s).
 This ensures the quality of client submitted data.
 MOSP also uses JSON schemas for the generation of the object editor.
 
+[NOTE]
+===============================================
+JSON schemas are always public.
+===============================================
+
 For example, the JSON schema available link:https://objects.monarc.lu/schema/view/12[here] validates the Security referentials used in MONARC.
 
-When creating a new object with MOSP you have to:
-
-- specify a name and a brief description;
-- choose a JSON schema from the ones available on the platform;
-- choose an owning organization (a user account can be bound to one or multiple organizations);
-- specify if the object will be public or private. Please limit the use of private objects. Our goal is to empower the sharing of information. Private objects can be useful for drafts.
-- choose at least one license from the proposed.
-
-
-You can use any available schemas in order to create shareable JSON objects.
-
-JSON schemas are always public.
 
 ==== Example of schemas
 
@@ -103,6 +96,16 @@ JSON schemas are always public.
 
 
 === Creating a new object
+
+When creating a new object with MOSP you have to:
+
+- choose a JSON schema from the ones available on the platform;
+- specify a name and a brief description;
+- choose an owning organization (a user account can be bound to one or multiple organizations);
+- specify if the object will be public or private. Please limit the use of private objects. Our goal is to empower the sharing of information. Private objects can be useful for drafts.
+- choose at least one license from the proposed.
+
+You can use any available schemas in order to create shareable JSON objects.
 
 === Select a schema
 
