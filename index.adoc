@@ -250,9 +250,8 @@ The content of the newly created object is also returned.
 Getting all objects owned by the MONARC organization:
 [source,bash]
 ----
-https://objects.monarc.lu/api/v1/json_object?q={"name":"organization","op":"has","val":{"name":"name","op":"eq","val": "MONARC"}}
+https://objects.monarc.lu/api/v1/json_object?q={"filters":[{"name":"organization","op":"has","val":{"name":"name","op":"eq","val": "MONARC"}}]}
 ----
-
 
 Getting all schemas owned by the MONARC organization:
 [source,bash]
@@ -260,11 +259,16 @@ Getting all schemas owned by the MONARC organization:
 https://objects.monarc.lu/api/v1/schema?q={"filters":[{"name":"organization","op":"has","val":{"name":"name","op":"eq","val":"MONARC"}}]}
 ----
 
-
-
+Getting all the security referentials owned by the MONARC organization:
 [source,bash]
 ----
-https://objects.monarc.lu/api/v1/json_object?q={"name":"schema","op":"has","val":{"name":"name","op":"eq","val": "Security referentials"}}
+https://objects.monarc.lu/api/v1/json_object?q={"filters":[{"name":"schema","op":"has","val":{"name":"name","op":"eq","val": "Security referentials"}},{"name":"organization","op":"has","val":{"name":"name","op":"eq","val": "MONARC"}}]}
+----
+
+Getting all the risks owned by the MONARC organization:
+[source,bash]
+----
+https://objects.monarc.lu/api/v1/json_object?q={"filters":[{"name":"schema","op":"has","val":{"name":"name","op":"eq","val": "Risks"}},{"name":"organization","op":"has","val":{"name":"name","op":"eq","val": "MONARC"}}]}
 ----
 
 
