@@ -2,7 +2,7 @@
 CASES Luxembourg <info@cases.lu>
 v{docdate}
 :encoding: utf-8
-:Revision: 0.3
+:Revision: 0.
 :description: MONARC Objects Sharing Platform
 :keywords: risk-analysis, monarc, MOSP
 :imagesdir: images
@@ -291,5 +291,5 @@ organization of the schema.
 You can only create an object in one of the organizations your account is linked to.
 Since all schemas are public you can instantiate a new object with the schema of your choice.
 
-In order to see a private object or to edit an object your account
-should be linked to the owning organization of this object.
+In order to edit an object your account should be linked to the owning
+organization of this object.
