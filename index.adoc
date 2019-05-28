@@ -2,7 +2,7 @@
 CASES Luxembourg <info@cases.lu>
 v{docdate}
 :encoding: utf-8
-:Revision: 0.
+:Revision: 0.4
 :description: MONARC Objects Sharing Platform
 :keywords: risk-analysis, monarc, MOSP
 :imagesdir: images
