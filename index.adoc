@@ -2,7 +2,7 @@
 CASES Luxembourg <info@cases.lu>
 v{docdate}
 :encoding: utf-8
-:Revision: 0.4
+:Revision: 0.5
 :description: MONARC Objects Sharing Platform
 :keywords: risk-analysis, monarc, MOSP
 :imagesdir: images
@@ -160,7 +160,8 @@ https://objects.monarc.lu/api/v1/json_object
 [source,bash]
 ----
 $ json_object='{}'
-$ curl -i --user username:password \
+$ curl -i \
+    -H "Authorization: Token k8ZwQ6Cu1GRvJhO6517P9zcLroZzTZBYMwAoOfA6sm0MnGrBuxTzHGV6XfDWS_X__5w" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" -X POST \
     -d '{"name":"NIST","description":"Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5)" ,"org_id":2,"json_object":'"$json_object"'}' \
@@ -181,7 +182,8 @@ Vary: Cookie
 [source,bash]
 ----
 $ json_object='{}'
-$ curl -i --user username:password \
+$ curl -i \
+    -H "Authorization: Token k8ZwQ6Cu1GRvJhO6517P9zcLroZzTZBYMwAoOfA6sm0MnGrBuxTzHGV6XfDWS_X__5w" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" -X POST \
     -d '{"name":"NIST","description":"Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5)" ,"org_id":3,"json_object":'"$json_object"'}' \
@@ -204,7 +206,8 @@ Date: Thu, 21 Feb 2019 09:07:26 GMT
 [source,bash]
 ----
 $ json_object='{}'
-$ curl -i --user username:password \
+$ curl -i \
+    -H "Authorization: Token k8ZwQ6Cu1GRvJhO6517P9zcLroZzTZBYMwAoOfA6sm0MnGrBuxTzHGV6XfDWS_X__5w" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" -X POST \
     -d '{"name":"NIST","description":"Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5)" ,"org_id":3,"schema_id":12,"json_object":'"$json_object"'}' \
@@ -226,7 +229,8 @@ Date: Thu, 21 Feb 2019 09:07:26 GMT
 [source,bash]
 ----
 $ json_object='{"label":"NIST SP 800-53","measures":[{"category": "Access Control","code": "AC-1","label": "Access Control Policy and Procedures","uuid": "ebf10522-0f57-4880-aa73-e28a206b7be4"}],"uuid": "cfd2cd50-95fa-4143-b0e5-794249bacae1","version": "5.0"}'
-$ curl -i --user username:password \
+$ curl -i \
+    -H "Authorization: Token k8ZwQ6Cu1GRvJhO6517P9zcLroZzTZBYMwAoOfA6sm0MnGrBuxTzHGV6XfDWS_X__5w" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" -X POST \
     -d '{"name":"NIST","description":"Recommended Security Controls for Federal Information Systems and Organizations. (Rev.5)" ,"org_id":3,"schema_id":12,"json_object":'"$json_object"'}' \
