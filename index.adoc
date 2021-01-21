@@ -2,7 +2,7 @@
 CASES Luxembourg <info@cases.lu>
 v{docdate}
 :encoding: utf-8
-:Revision: 0.5
+:Revision: 0.6
 :description: MONARC Objects Sharing Platform
 :keywords: risk-analysis, monarc, MOSP
 :imagesdir: images
@@ -74,13 +74,13 @@ A JSON schema describes and validates your existing data format(s).
 This ensures the quality of client submitted data.
 MOSP also uses JSON schemas for the generation of the object editor.
 
-For example, the JSON schema available link:https://objects.monarc.lu/schema/view/12[here] validates the Security referentials used in MONARC.
+For example, the JSON schema available link:https://objects.monarc.lu/schema/view/12[here] validates the Security standards used in MONARC.
 
 
 ==== Example of schemas
 
-- link:https://objects.monarc.lu/schema/12[Security referentials]
-- link:https://objects.monarc.lu/schema/13[Security referentials mapping]
+- link:https://objects.monarc.lu/schema/12[Security standards]
+- link:https://objects.monarc.lu/schema/13[Security standards mapping]
 
 
 === Objects
@@ -124,12 +124,16 @@ image:export-objects-from-MOSP-for-MONARC.png[Exporting an object for use in MON
 
 MONARC will be able to handle the CSV or the JSON export.
 
+
+
+
 == Using the API
 
-An API is provided in order to interact with the service programmatically.
+APIs are provided in order to interact with the service programmatically.
 
+=== API v1
 
-=== Endpoint for Schemas
+==== Endpoint for Schemas
 
 Getting the list of schemas:
 [source,bash]
@@ -145,9 +149,9 @@ https://objects.monarc.lu/api/v1/schema/13
 ----
 
 
-=== Endpoint for JSON objects
+==== Endpoint for JSON objects
 
-==== Getting the list of JSON objects
+===== Getting the list of JSON objects
 
 [source,bash]
 ----
@@ -155,7 +159,7 @@ https://objects.monarc.lu/api/v1/json_object
 ----
 
 
-==== Creating a new object
+===== Creating a new object
 
 [source,bash]
 ----
@@ -249,7 +253,7 @@ The content of the newly created object is also returned.
 
 
 
-=== More complex queries
+==== More complex queries
 
 Getting all objects owned by the MONARC organization:
 [source,bash]
@@ -276,6 +280,15 @@ https://objects.monarc.lu/api/v1/json_object?q={"filters":[{"name":"schema","op"
 ----
 
 
+=== API v2
+
+The API version uses the OpenAPI Specification for its documentation. It is
+available link:https://objects.monarc.lu/api/v2[here].
+
+If you simply need to query MOSP (GET requests), the API v2 is recommended.
+This API will be completed and improved over the time.
+
+
 
 == Permissions
 
@@ -297,3 +310,20 @@ Since all schemas are public you can instantiate a new object with the schema of
 
 In order to edit an object your account should be linked to the owning
 organization of this object.
+
+
+
+== Schemas external references
+
+If there are external references between the schemas available in your MOSP
+instance, the relations will be analyzed by MOSP in order to link objects.
+
+
+[[mosp-references-schemas]]
+image::link_schemas.png[References between schemas, align="center", scaledwidth="75%"]
+
+
+[[mosp-relations-schema]]
+image::relations-in-schema.png[Relations in a schema, align="center", scaledwidth="75%"]
+
+Theses links are considered during the edition of objects (<<Edit object definition>>).
