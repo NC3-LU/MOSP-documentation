@@ -1,0 +1,47 @@
+:toc: left
+:toclevels: 3
+
+=== API v2
+
+The API version 2 uses the OpenAPI Specification for its documentation. It is
+available link:https://objects.monarc.lu/api/v2[here].
+
+==== Clients using this API
+
+- link:https://www.monarc.lu[MONARC]
+- link:https://pypi.org/project/PyMOSP/[pyMOSP]
+
+
+==== Examples
+
+===== Create a new object
+
+With curl:
+
+[source,bash]
+----
+object='[
+  {
+    "name": "New vulnerability",
+    "description": "Description of this new object",
+    "schema_id": 14,
+    "org_id": 2,
+    "json_object": {
+      "code": "10",
+      "description": "",
+      "label": "Possibility of installing correction programmes, updates, patches, hotfixes, etc.",
+      "language": "EN",
+      "uuid": "69fbfe01-4591-11e9-9173-0800277f0572"
+    },
+    "licences": [
+      {
+        "license_id": "CC0-1.0"
+      }
+    ]
+  }
+]'
+
+curl -X POST "https://objects.monarc.lu/api/v2/object/" -H  "accept: application/json" -H  "X-API-KEY: <your-token>" -H  "Content-Type: application/json" -d $object
+----
+
+With pyMOSP:
