@@ -42,22 +42,14 @@ v{docdate}
 :uri-mosp: https://objects.monarc.lu
 
 
-ifndef::pdf-style[]
-[NOTE]
-===============================================
-This document is also available as a
-link:https://www.monarc.lu/assets/files/guides/MOSP-documentation.pdf[PDF file].
-===============================================
-endif::[]
-
-
 == Introduction
 
 This document is intended to be a presentation and a user guide to
 link:https://github.com/CASES-LU/MOSP[MOSP], a platform to create, edit and share valid JSON objects.
 
 MOSP supports any kind of JSON objects, you just have to specify a <<JSON schema>>.
-The instance link:https://objects.monarc.lu[objects.monarc.lu], operated by link:https://www.cases.lu[CASES], is dedicated to gather security related objects in the first place aimed to be used with link:https://www.monarc.lu[MONARC].
+The instance link:https://objects.monarc.lu[objects.monarc.lu] is operated by link:https://www.cases.lu[CASES].
+It is dedicated to gather security related objects, in the first place aimed to be used with link:https://www.monarc.lu[MONARC].
 
 Objects officially provided by the MONARC project are available link:https://objects.monarc.lu/organization/MONARC[here].
 Note that any *object* created with a *JSON schema* provided by the MONARC project will be compatible with the MONARC software.
@@ -140,8 +132,8 @@ APIs are provided in order to interact with the service programmatically.
 
 The section xref:api-v2.adoc#API v2[API v2] describes the API v2.
 
-The xref:api-v1.adoc#API v1[API v1] is still available but is discouraged to be
-used.
+The xref:api-v1.adoc#API v1[API v1] is still available but is really discouraged
+to be used.
 
 
 
